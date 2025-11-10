@@ -1,0 +1,14 @@
+{
+  "name": "cloudflare-hono-waitlist-template",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "bun run --bun astro dev",
+    "build": "bun run --bun astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "astro": "^5.15.4"
+  }
+}
