@@ -4,14 +4,18 @@
   "version": "0.0.1",
   "scripts": {
     "client": "bun run --bun astro dev",
-    "build": "bun run --bun astro build",
+    "build:client": "bun run --bun astro build",
     "preview": "astro preview",
     "astro": "astro",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "lint": "eslint 'src/**/*.{js,ts,tsx,astro}'",
     "worker": "wrangler dev",
-    "dev": "concurrently \"bun run client\" \"bun run worker\""
+    "dev": "concurrently \"bun run client\" \"bun run worker\"",
+    "dryrun:staging": "bun run build:client && wrangler deploy --dry-run --env staging",
+    "dryrun:prod": "bun run build:client && wrangler deploy --dry-run --env production",
+    "deploy:staging": "bun run build:client && wrangler deploy --env staging",
+    "deploy:prod": "bun run build:client && wrangler deploy --env production"
   },
   "dependencies": {
     "@astrojs/react": "^4.4.2",
@@ -24,6 +28,7 @@
     "eslint": "^9.39.1",
     "eslint-plugin-astro": "^1.5.0",
     "hono": "^4.10.6",
+    "jose": "^6.1.2",
     "lucide-react": "^0.554.0",
     "prettier": "^3.6.2",
     "prettier-plugin-astro": "^0.14.1",

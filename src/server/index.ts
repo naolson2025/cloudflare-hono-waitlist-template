@@ -1,6 +1,8 @@
-import { Hono } from 'hono'
-const app = new Hono()
+import { Hono } from "hono";
+import { accessAuth } from "./middleware/auth";
 
-app.get('/api/health', (c) => c.json('Healthy!🔥'))
+const app = new Hono();
 
-export default app
+app.use(accessAuth).get("/api/health", (c) => c.json("Healthy!🔥"));
+
+export default app;

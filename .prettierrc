@@ -6,6 +6,12 @@
       "options": {
         "parser": "astro"
       }
+    },
+    {
+      "files": "wrangler.jsonc",
+      "options": {
+        "trailingComma": "none"
+      }
     }
   ]
 }
