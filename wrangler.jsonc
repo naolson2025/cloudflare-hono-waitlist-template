@@ -6,13 +6,27 @@
     "directory": "./dist",
     "binding": "ASSETS"
   },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "dojo_local_db",
+      "database_id": "123"
+    }
+  ],
   "env": {
     "staging": {
       "vars": {
         "ENVIRONMENT": "staging",
         "CF_ACCESS_DOMAIN": "https://nickolsoncodes.cloudflareaccess.com",
         "POLICY_AUD": "693cb9897bba94b41ef69a2ab57d6538431c910d1422395067588d5cb32d293e"
-      }
+      },
+      "d1_databases": [
+        {
+          "binding": "DB",
+          "database_name": "dojo_staging_db",
+          "database_id": "9bbf2fd5-766d-4b3d-9fbe-9f26ae89b7f6"
+        }
+      ]
     },
     "production": {
       "vars": {
