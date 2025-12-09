@@ -10,7 +10,8 @@
     {
       "binding": "DB",
       "database_name": "dojo_local_db",
-      "database_id": "123"
+      "database_id": "123",
+      "migrations_dir": "./src/server/db/migrations"
     }
   ],
   "env": {
@@ -24,7 +25,8 @@
         {
           "binding": "DB",
           "database_name": "dojo_staging_db",
-          "database_id": "9bbf2fd5-766d-4b3d-9fbe-9f26ae89b7f6"
+          "database_id": "9bbf2fd5-766d-4b3d-9fbe-9f26ae89b7f6",
+          "migrations_dir": "./src/server/db/migrations"
         }
       ]
     },
