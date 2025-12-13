@@ -3,6 +3,9 @@
 - install dependencies with `bun i`
 - `bun run dev`
 
+# Running Tests
+- `bun run test`
+
 # Deploying to Cloudflare
 - update the `wrangler.jsonc` with your env variables:
     - POLICY_AUD
